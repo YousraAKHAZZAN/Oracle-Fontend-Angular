@@ -1,0 +1,22 @@
+<div>
+    <h1>Privileges Management</h1>
+  
+    <h2>All Privileges</h2>
+    <ul>
+      <li *ngFor="let privilege of privileges" (click)="fetchPrivilegeDetails(privilege)">
+        {{ privilege }}
+      </li>
+    </ul>
+  
+    <div *ngIf="selectedPrivilege">
+      <h3>Selected Privilege: {{ selectedPrivilege.name }}</h3>
+      <p>{{ selectedPrivilege.description }}</p>
+  
+      <label for="userName">User Name:</label>
+      <input id="userName" [(ngModel)]="userName" placeholder="Enter user name" />
+  
+      <button (click)="grantPrivilege()">Grant Privilege</button>
+      <button (click)="revokePrivilege()">Revoke Privilege</button>
+    </div>
+  </div>
+  

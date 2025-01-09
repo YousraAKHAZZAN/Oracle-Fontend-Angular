@@ -17,7 +17,7 @@ import { BrowserModule } from '@angular/platform-browser';
 export class RoleManagementComponent implements OnInit {
   roles: Role[] = [];
   role: Role = { name: '', description: '', privileges: [] };
-  privilegeName: string = '';
+  privileges: string = '';
 
   constructor(private roleService: RoleService) {}
 
@@ -51,22 +51,21 @@ export class RoleManagementComponent implements OnInit {
 
   // Accorder un privilège
   grantPrivilege(roleName: string) {
-    if (this.privilegeName) {
-      this.roleService.grantPrivilege(roleName, this.privilegeName).subscribe(() => {
+    if (this.privileges) {
+      this.roleService.grantPrivilege(roleName, this.privileges).subscribe(() => {
         this.loadRoles(); // Recharger les rôles
-        this.privilegeName = ''; // Réinitialiser le champ
+        this.privileges = ''; // Réinitialiser le champ
       });
     }
   }
 
   // Révoquer un privilège
-  revokePrivilege(roleName: string, privilegeName: string) {
-    this.roleService.revokePrivilege(roleName, privilegeName).subscribe(() => {
-      this.loadRoles(); // Recharger les rôles
-    });
+  revokePrivilege(roleName: string, privilege: any) {
+    if (privilege && privilege.name) {
+      this.roleService.revokePrivilege(roleName, privilege.name).subscribe(() => {
+        this.loadRoles(); // Recharger les rôles
+      });
+    }
   }
-}
-function provideHttpClient(): import("@angular/core").Provider {
-  throw new Error('Function not implemented.');
 }
 
