@@ -1,0 +1,38 @@
+<div class="role-management">
+    <h2>Gestion des rôles</h2>
+  
+    <!-- Formulaire de création de rôle -->
+    <form (ngSubmit)="addRole()">
+      <div>
+        <label for="name">Nom du rôle</label>
+        <input id="name" [(ngModel)]="role.name" name="name" required />
+      </div>
+      <div>
+        <label for="description">Description</label>
+        <input id="description" [(ngModel)]="role.description" name="description" required />
+      </div>
+      <button type="submit">Ajouter un rôle</button>
+    </form>
+  
+    <h3>Liste des rôles</h3>
+    <ul>
+      <li *ngFor="let role of roles">
+        {{ role.name }} ({{ role.description }})
+        <button (click)="deleteRole(role.name)">Supprimer</button>
+  
+        <!-- Gestion des privilèges -->
+        <div>
+          <input [(ngModel)]="privilegeName" placeholder="Nom du privilège" />
+          <button (click)="grantPrivilege(role.name)">Accorder privilège</button>
+  
+          <ul>
+            <li *ngFor="let privilege of role.privileges">
+              {{ privilege }}
+              <button (click)="revokePrivilege(role.name, privilege)">Révoquer privilège</button>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

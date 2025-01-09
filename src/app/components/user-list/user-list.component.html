@@ -1,0 +1,26 @@
+<div>
+  <h2>User List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Default Tablespace</th>
+        <th>Temporary Tablespace</th>
+        <th>Quota Limit</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.username }}</td>
+        <td>{{ user.defaultTablespace }}</td>
+        <td>{{ user.temporaryTablespace }}</td>
+        <td>{{ user.quotaLimit }}</td>
+        <td>
+          <button (click)="deleteUser(user.username)">Delete</button>
+          <button (click)="navigateToform()">Edit</button> <!-- Modification ici -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
