@@ -1,0 +1,92 @@
+/* Conteneur principal */
+div {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+  }
+  
+  /* Titre dynamique */
+  div h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #262d6d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Style des labels */
+  div label {
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  /* Style des champs de saisie */
+  div input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+  }
+  
+  div input:focus {
+    border-color: #262d6d;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+  }
+  
+  /* Bouton */
+  div button {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    background-color: #262d6d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  div button:hover {
+    background-color: #262d6d;
+    transform: scale(1.05);
+  }
+  
+  div button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    div {
+      padding: 15px;
+    }
+  
+    div h2 {
+      font-size: 20px;
+    }
+  
+    div input {
+      font-size: 14px;
+    }
+  
+    div button {
+      font-size: 14px;
+    }
+  }
+  

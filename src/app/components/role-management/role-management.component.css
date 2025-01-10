@@ -1,0 +1,156 @@
+/* Conteneur principal */
+.role-management {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+  }
+  
+  /* Titre principal */
+  .role-management h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #262d6d;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Sous-titre */
+  .role-management h3 {
+    font-size: 20px;
+    margin-top: 30px;
+    color: #555555;
+  }
+  
+  /* Style des labels */
+  .role-management label {
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  /* Style des champs de formulaire */
+  .role-management input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .role-management input:focus {
+    border-color: #262d6d;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+  }
+  
+  /* Boutons */
+  .role-management button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #262d6d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .role-management button:hover {
+    background-color: #262d6d;
+    transform: scale(1.05);
+  }
+  
+  .role-management button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Liste des rôles */
+  .role-management ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .role-management li {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .role-management li button {
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  /* Section des privilèges */
+  .role-management li > div {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .role-management li > div input {
+    width: calc(70% - 15px);
+    margin-right: 10px;
+  }
+  
+  .role-management li > div ul {
+    margin-top: 10px;
+  }
+  
+  .role-management li > div ul li {
+    padding: 5px 10px;
+    background-color: #e9f7e9;
+    border: 1px solid #b2d8b2;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .role-management {
+      padding: 15px;
+    }
+  
+    .role-management h2 {
+      font-size: 24px;
+    }
+  
+    .role-management h3 {
+      font-size: 18px;
+    }
+  
+    .role-management li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .role-management li > div {
+      margin-top: 15px;
+    }
+  
+    .role-management li > div input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  

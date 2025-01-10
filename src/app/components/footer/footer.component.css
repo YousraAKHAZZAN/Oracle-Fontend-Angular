@@ -1,0 +1,79 @@
+/* Footer Styling */
+.oracle-footer {
+    background-color: #1b365c;
+    color: #ffffff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .oracle-footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .oracle-footer .footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .oracle-footer .footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ffff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ffff;
+    display: inline-block;
+  }
+  
+  .oracle-footer .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .oracle-footer .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .oracle-footer .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .oracle-footer .footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .oracle-footer .footer-section ul li a:hover {
+    color: #ffff;
+  }
+  
+  /* Footer Bottom */
+  .oracle-footer .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888888;
+    border-top: 1px solid #444444;
+    padding-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .oracle-footer .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .oracle-footer .footer-section {
+      text-align: center;
+    }
+  }
+  

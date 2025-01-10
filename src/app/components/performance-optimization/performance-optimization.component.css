@@ -11,8 +11,8 @@ div {
   }
   
   /* Titre principal */
-  div h2 {
-    font-size: 24px;
+  div h1 {
+    font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
     color: #262d6d;
@@ -20,15 +20,24 @@ div {
     letter-spacing: 1px;
   }
   
+  /* Sous-titres */
+  div h2 {
+    font-size: 22px;
+    margin-top: 30px;
+    color: #555555;
+    border-bottom: 2px solid #262d6d;
+    padding-bottom: 5px;
+  }
+  
   /* Table */
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 16px;
+    text-align: left;
   }
   
-  /* En-tête du tableau */
   table thead {
     background-color: #262d6d;
     color: #ffffff;
@@ -36,12 +45,10 @@ div {
   
   table thead th {
     padding: 12px;
-    text-align: left;
-    font-weight: bold;
     text-transform: uppercase;
+    font-weight: bold;
   }
   
-  /* Lignes du tableau */
   table tbody tr {
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s ease;
@@ -55,17 +62,32 @@ div {
     background-color: #f1f1f1;
   }
   
-  /* Cellules du tableau */
   table td {
     padding: 12px;
-    text-align: left;
   }
   
-  /* Boutons d'actions */
-  table td button {
-    padding: 8px 12px;
-    margin-right: 5px;
-    font-size: 14px;
+  /* Zone d'entrée et de boutons */
+  div input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    width: calc(100% - 22px);
+    max-width: 300px;
+  }
+  
+  div input:focus {
+    border-color: #262d6d;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+  }
+  
+  div button {
+    padding: 10px 15px;
+    font-size: 16px;
     background-color: #262d6d;
     color: #ffffff;
     border: none;
@@ -74,31 +96,38 @@ div {
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
   
-  table td button:hover {
+  div button:hover {
     background-color: #262d6d;
     transform: scale(1.05);
   }
   
-  table td button:active {
+  div button:active {
     transform: scale(0.95);
   }
   
-  table td button:nth-child(2) {
-    background-color: #2196F3;
-  }
-  
-  table td button:nth-child(2):hover {
-    background-color: #1E88E5;
+  /* Pré-formaté */
+  pre {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    color: #333333;
+    overflow-x: auto;
   }
   
   /* Responsive Design */
   @media (max-width: 600px) {
+    div {
+      padding: 15px;
+    }
+  
     table {
       font-size: 14px;
     }
   
     table thead {
-      display: none; /* Cache les en-têtes sur mobile */
+      display: none; /* Cacher l'en-tête du tableau sur mobile */
     }
   
     table tbody tr {
@@ -120,6 +149,10 @@ div {
       width: 50%;
       text-align: left;
       font-weight: bold;
+    }
+  
+    div input {
+      width: 100%;
     }
   }
   
