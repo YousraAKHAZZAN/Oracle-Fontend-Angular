@@ -6,6 +6,9 @@ import { PrivilegesComponent } from './components/privileges/privileges.componen
 import { PerformanceOptimizationComponent } from './components/performance-optimization/performance-optimization.component';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
+import { OptimizationReportComponent } from './components/optimization-report/optimization-report.component';
+import { SlowQueriesComponent } from './components/slow-queries/slow-queries.component';
+import { PerformanceMonitoringComponent } from './components/performance-monitoring/performance-monitoring.component';
 
 
 
@@ -17,6 +20,9 @@ export const routes: Routes = [
     { path: 'roles', component: RoleManagementComponent },
     { path: 'privileges', component: PrivilegesComponent },
     { path: 'performance', component: PerformanceOptimizationComponent }, 
+    { path: 'slow-queries', component: SlowQueriesComponent },
+    { path: 'optimization-report/:sqlId', component: OptimizationReportComponent },
+    { path: 'performancemonitoring', component: PerformanceMonitoringComponent },
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     
     

@@ -13,8 +13,9 @@ import { RoleManagementComponent } from './components/role-management/role-manag
 
 
 @NgModule({
-  declarations: [RoleManagementComponent],
-  imports: [AppComponent,BrowserModule,FormsModule, HttpClientModule,  RouterModule.forRoot(routes)],
+  declarations: [],
+  imports: [AppComponent,BrowserModule,FormsModule, HttpClientModule,
+     RouterModule.forRoot(routes)],
   providers: [UserService,HttpClient],
   bootstrap: [] // Bootstrap your root component
 })

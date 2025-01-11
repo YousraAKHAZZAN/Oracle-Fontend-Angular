@@ -1,29 +1,4 @@
 <div>
-    <h1>Performance Optimization</h1>
-  
-    <h2>Slow Queries</h2>
-    <table border="1">
-      <thead>
-        <tr>
-          <th>SQL ID</th>
-          <th>Elapsed Time (s)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let query of slowQueries">
-          <td>{{ query.sql_id }}</td>
-          <td>{{ query.elapsed_time_secs }}</td>
-        </tr>
-      </tbody>
-    </table>
-  
-    <h2>Tuning Recommendations</h2>
-    <div>
-      <input [(ngModel)]="sqlId" placeholder="Enter SQL ID" />
-      <button (click)="fetchTuningRecommendations()">Get Recommendations</button>
-    </div>
-    <pre *ngIf="tuningRecommendations">{{ tuningRecommendations | json }}</pre>
-  
     <h2>Gather Table Statistics</h2>
     <div>
       <input placeholder="Schema Name" #schemaName />
@@ -36,5 +11,5 @@
       <input placeholder="Schema Name" #schemaNameForSchedule />
       <button (click)="scheduleStats(schemaNameForSchedule.value)">Schedule Stats</button>
     </div>
-  </div>
+ </div>
   
